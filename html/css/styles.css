@@ -1,0 +1,87 @@
+/****************************************************************************
+ * styles.css
+ *
+ * Computer Science 50
+ * Final Project
+ *
+ * Global CSS.
+ ***************************************************************************/
+
+.container
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#top
+{
+    /* center contents */
+    text-align: center;
+}
+
+#middle
+{
+    /* center contents */
+    text-align: center;
+}
+
+#bottom
+{
+    /* shrink bottom's font size */
+    font-size: smaller;
+
+    /* surround with whitespace */
+    margin: 20px;
+
+    /* center contents */
+    text-align: center;
+}
+
+.error
+{
+font-size:11px;
+color:#cc0000;
+padding:4px;
+}
+
+#middle .nav
+{
+    display: inline-block;
+}
+
+#logout
+{   
+    padding-right:30px;
+}
+
+#logo
+{
+    padding-left:50px;
+}
+
+.table form
+{
+    margin-bottom: 0px;
+}
+
+.survey
+{
+    display:none; 
+}
+
+.videosummary
+{
+    display:none;
+}
+
+.audiotranscript
+{
+    display:none;
+}
+
+@media (min-width: 979px) {
+    body {
+        padding-top: 50px;
+    }
+}

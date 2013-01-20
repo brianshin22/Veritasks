@@ -2,7 +2,7 @@
             
             <hr>
             <div id="bottom">
-                Copyright &#169; Brian, Jesaiah, and Marco
+                Copyright 2013 &#169 Brian and Marco
             </div>
 
 

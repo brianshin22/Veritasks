@@ -4,7 +4,7 @@
 
 $(document).ready(function(){
   
-$("#addproperty").remove();
+$("#addproperty").html("Sign up").attr("href","register.php");
 $("#logout").html("Login").attr("href","login.php");
   
 });

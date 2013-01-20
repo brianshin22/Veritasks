@@ -36,9 +36,11 @@ $(document).ready(function(){
     });
     
     $('.nav li a').on('click', function() {
-    $(this).parent().parent().find('.active').removeClass('active');
-    $(this).parent().addClass('active');
-});
-
+        $(this).parent().parent().find('.active').removeClass('active');
+        $(this).parent().addClass('active');
+    });
+    
+    $('.btn').addClass("btn-custom2");
+    
 });
 

@@ -34,13 +34,12 @@
 
     <body>
 
-        <div class="container-fluid">
-
+        
             <div id="top">
-                <h3></h3>
-                <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar navbar-fixed-top">
                     <div class="navbar">
                         <div class="navbar-inner">
+                        <div class="container">
                             <a class="brand" id= "logo" href="index.php">Veritasks</a>
                             <ul class="nav">
                               <li <?=echoActiveClassIfRequestMatches("about")?>>

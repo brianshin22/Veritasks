@@ -47,12 +47,8 @@
                                     <a href="index.php">Available Properties</a></li>
                                   <li class="divider-vertical"></li>
                                 </ul>
-                                <div id="addproperty">
-                                    <a class="btn btn-primary pull-right" href="addProperty.php">Add a property</a>
-                                </div>
-                                <div id="logout">
-                                    <a class="btn btn-primary pull-right" href="logout.php">Logout</a>
-                                </div>
+                                <a class="btn btn-custom pull-right" id="addproperty" href="addProperty.php">Add a property</a>
+                                <a class="btn btn-custom pull-right" id="logout" href="logout.php">Logout</a>
                             </div>
                         </div>
                     </div>

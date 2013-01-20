@@ -1,3 +1,5 @@
+<script src="js/changeNavbar.js"></script>
+
 <h3>About Veritasks</h3>
 
 <div class= "row">

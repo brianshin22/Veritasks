@@ -1,9 +1,13 @@
 <h3>About Veritasks</h3>
 
 <div class= "row">
-    <div class="span8">
-        <h4>Earn money during your idle hours online</h4>
-        <p>Veritasks provides a simple and reliable way to earn fast money by completing surveys, studies, and other human-required tasks! Every day, many people require tasks to be completed by humans, and they are willing to pay!</p>
+    <div class="span6">
+        <h4>Want to sublet a room, apartment, or house?</h4>
+        <p>Earn money by lending out living space wihtin the community?</p>
+    </div>
+    <div class = "span6">
+        <h4>Looking for housing?</h4>
+        <p>Whether it's for summer, winter, or year-round, look for leases or sublets at Harvard from students and faculty!</p>
     </div>
 </div>
 

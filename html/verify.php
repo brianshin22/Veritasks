@@ -40,8 +40,18 @@
                 apologize("Could not activate user.");
             }
             
+                        
 
             $_SESSION["id"] = $check["id"];
+
+            $uploadpath = "uploads/" . $_SESSION["id"];
+            
+            if(!mkdir($uploadpath, 0755))
+            {
+                die("Could not create folder");
+            } 
+
+
             render("activated_form.php", array("title" => "Welcome to hSubs!"));
 
         }

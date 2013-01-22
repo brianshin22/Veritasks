@@ -51,7 +51,7 @@
                                   <li <?=echoActiveClassIfRequestMatches("about")?>>
                                     <a href="about.php">About</a></li>
                                   <li class="divider-vertical"></li>
-                                  <li <?=echoActiveClassIfRequestMatches("index")?>>
+                                  <li <?=echoActiveClassIfRequestMatches("properties")?>>
                                     <a href="availableProperties.php">Available Properties</a></li>
                                   <li class="divider-vertical"></li>
                                  

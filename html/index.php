@@ -2,10 +2,10 @@
 
     require("../includes/config.php"); 
     
-    redirect("about.php");
+    //redirect("about.php");
 
 
-    // render("home.php", array("title" => "Harvard Sublets"));
+    render("home.php", array("title" => "Harvard Sublets"));
 
     
 ?>

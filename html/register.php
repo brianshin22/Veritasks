@@ -40,7 +40,7 @@
 
  
         $msg = 'Your account has been created! Please click the link to confirm your registration. You can enter your login information and the verification code given below.' .PHP_EOL;
-        $msg.= "http://veritasks/verify.php?email="  .$email ."&hash=".$hash .PHP_EOL . "Verification code: " .$hash .PHP_EOL."Sincerely," .PHP_EOL . "hSub";
+        $msg.= "http://" . $_SERVER["SERVER_NAME"]."/verify.php?email="  .$email ."&hash=".$hash .PHP_EOL . "Verification code: " .$hash .PHP_EOL."Sincerely," .PHP_EOL . "hSub";
         $msg.= "";
         
         $mailer = new PHPMailer();
@@ -52,7 +52,7 @@
         $mailer->Port = '465';
         $mailer->Username = 'brianshin22@gmail.com';
         $mailer->Password = 'boarder3922';
-        $mailer->SetFrom('brianhshin22@gmail.com', 'Harvard Sublets');
+        $mailer->SetFrom('brianshin22@gmail.com', 'Harvard Sublets');
         $mailer->Subject = 'Thanks for registering with hSub!';
         $mailer->Body = $msg;
 
@@ -65,7 +65,8 @@
         }
         else
         {
-            echo 'Mail sent to ' . $name . " at " .$email ;
+            render("confirmation_form.php", array("title" => "Registration confirmed"));
+            // echo 'Mail sent to ' . $name . " at " .$email ;
         }
         $mailer->ClearAddresses();
         $mailer->ClearAttachments(); 

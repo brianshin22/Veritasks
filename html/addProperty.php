@@ -7,33 +7,34 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         
-        
         // try to add task
-        $results = query("INSERT INTO tasks (sdescrip, ldescrip, surveyembed, time, name, 
-                         createdby, videoembed, question, audioembed, confirmationcode, money, maxUsers, dateCreated, taskType) 
-                         VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now(), ?)",
-                         $_POST["sdescrip"], $_POST["ldescrip"],  $_POST["surveyembed"], $_POST["time"],  
-                         $_POST["taskname"], $_SESSION["id"], $_POST["videoembed"], $_POST["vquestion"], $_POST["audioembed"], $_POST["confirmationcode"],
-                         $_POST["money"], $_POST["maxUsers"], $_POST["tasktype"]);
+        $results = query("INSERT INTO properties (property_type, numguests, Description, 
+                        Address, ownerid) VALUES (?,?,?,?,?)",
+                         $_POST["propertytype"], $_POST["numguests"], $_POST["descrip"], $_POST["address"], $_SESSION["id"]);
         if ($results === false)
         {
-            apologize("Unable to create a new task. Please try again.");
+            apologize("Unable to add your property. Please try again.");
         }
+        
         $results = query("SELECT LAST_INSERT_ID() AS id");
-        $lastCreatedTask = $results[0]["id"];
+        $property = $results[0]["id"];
         
-        if ($lastCreatedTask === false)
+        if ($property === false)
         {
-            apologize("Error updating most recent task.");
+            apologize("Error updating property.");
         }
         
-        $_SESSION['lastCreatedTask'] = $lastCreatedTask;
+        $_SESSION['property'] = $property;
         
-        $price = $_POST["money"]*$_POST["maxUsers"];
-        // redirect to tasks list
-        render("test_Payment_page.php", array("price" => $price));
+        $results2 = query("INSERT INTO listings (begindate, enddate, price, 
+                        p_id) VALUES (?,?,?,?)",
+                         $_POST["begindate"], $_POST["enddate"], $_POST["price"], $_SESSION["property"]);
+        if ($results2 === false)
+        {
+            apologize("Unable to add your property. Please try again.");
+        }
         
-        //redirect("/index.php");
+        redirect("about.php");
     }
     else
     {

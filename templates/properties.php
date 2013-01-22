@@ -4,7 +4,7 @@
 
 <div class="row">
 <div class="span10 offset2">
-<h3><?echo $name?>'s Available Tasks</h3>
+<h3>Available Properties</h3>
 
 <table id="tasktable" class="table table-striped table-hover table-bordered ">
     <thead>

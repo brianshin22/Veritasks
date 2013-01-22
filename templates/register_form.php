@@ -26,11 +26,6 @@
         </div>
         
         <div class="control-group">
-            <input name="paypalemail" placeholder="Paypal Email" id = "paypalemail" type="text"
-                   title="Please enter your Paypal email to receive payments"/>
-        </div>
-        
-        <div class="control-group">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </fieldset>

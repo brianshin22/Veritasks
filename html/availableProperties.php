@@ -16,9 +16,13 @@
             apologize("Could not retrieve name");
         }
         
-        $name = $name[0];
-        $_SESSION["name"] = $name["name"];
-    
+        if (count($name) == 1)
+        {
+            $name = $name[0];
+            $_SESSION["name"] = $name["name"];
+
+        }
+           
     
         // renders tasks
         render("properties.php", array("rows" => $rows, "name" => $_SESSION["name"], "title" => "Available Properties"));

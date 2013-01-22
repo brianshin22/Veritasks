@@ -1,10 +1,13 @@
 <script src="js/carousel.js"></script>
 
 <div>
-    <h2>Welcome to <a href="/">Harvard Sublets</a></h2>
+    <h2>Welcome to Harvard Sublets!</h2>
     
 </div>
 
+
+
+<!--
 <div class="container">
     <div id="carousel" class="carousel slide">
         
@@ -27,6 +30,8 @@
         
     </div>
 </div>
+
+-->
 
 
 <div>

@@ -2,6 +2,8 @@
 
 <script src="js/makeIntoTable.js"> </script>
 
+<div class="row">
+<div class="span10 offset2">
 <h3><?echo $name?>'s Available Tasks</h3>
 
 <table id="tasktable" class="table table-striped table-hover table-bordered ">
@@ -40,3 +42,29 @@
     </tbody>
 </table>
 
+<script src="galleria/galleria-1.2.9.min.js"></script>
+<style>
+    #galleria{ width: 800; height: 400px; background: #000 }
+</style>
+
+<div id="galleria">
+<?php 
+
+$dirname = "uploads/"; 
+$images = scandir($dirname); 
+$ignore = Array(".", "..", "otherfiletoignore");
+foreach($images as $curimg){
+if(!in_array($curimg, $ignore)) {
+echo "<img src='uploads/$curimg' />\n";
+}; 
+}  
+     
+?> 
+</div>
+<script>
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('#galleria');
+</script>
+
+</div>
+</div>

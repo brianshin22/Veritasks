@@ -43,31 +43,22 @@
                     
                     <div class="control-group">
                         <label class="control-label" for="photos">Photos <i class="icon-lock"></i></label>
-                         
-        
-                        <input name="photos" placeholder="Link to photos" rel="tooltip" id="photos" type="file" multiple
-                               title="Please enter a link to photos of your property."/>
+                         See below
                     </div>
                     
-                    <button id="uploading" class="btn">Upload</button>
-                   
                     
-                    <span id="preview"></span>
-                    
-                    <div class="control-group">
-                        <button type="submit" class="btn">Submit</button>
-                    </div>
                 </fieldset>
             </form>
-<div id="dragAndDropFiles" class="uploadArea">
-</div>           
-<form name="demoFiler" id="demoFiler" enctype="multipart/form-data">
-<input type="file" name="multiUpload" id="multiUpload" multiple />
-<input type="submit" name="submitHandler" id="submitHandler" value="Upload" />
-</form>
-<div class="progressBar">
-<div class="status"></div>
-</div>
+            <div id="dragAndDropFiles" class="uploadArea">
+            </div>           
+            <form name="demoFiler" id="demoFiler" enctype="multipart/form-data">
+                <input type="file" name="multiUpload" id="multiUpload" multiple />
+                <input type="submit" name="submitHandler" id="submitHandler" value="Upload photos" />
+            </form>
+            <div class="progressBar">
+                <div class="status"></div>
+            </div>
+            <button type="submit" class="btn" form="addListing">Submit</button>
         </div>
     </div>
 </div>

@@ -52,12 +52,12 @@
                                     <a href="about.php">About</a></li>
                                   <li class="divider-vertical"></li>
                                   <li <?=echoActiveClassIfRequestMatches("index")?>>
-                                    <a href="index.php">Available Properties</a></li>
+                                    <a href="availableProperties.php">Available Properties</a></li>
                                   <li class="divider-vertical"></li>
                                  
                                 </ul>
                                 <a class="btn pull-right" id="addproperty" href="addProperty.php">Add a property</a>
-                                <a class="btn pull-right" id="logout" href="logout.php">Logout</a>
+                                <a class="btn pull-right" id="logout" style="margin-right:5px" href="logout.php">Logout</a>
                             </div>
                         </div>
                     </div>
@@ -66,5 +66,6 @@
 
 
             <div id="middle">
+
 
 

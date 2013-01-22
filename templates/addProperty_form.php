@@ -2,6 +2,7 @@
 
 <script src="js/validTask.js"></script>
 <script src="js/multiupload.js"></script>
+<?php echo "uploads/{$_SESSION["id"]}/"?>
 <div class="row">
     <div class="span5 offset4">
         <div class="well">
@@ -15,6 +16,12 @@
                             <option value="1">Apartment</option>
                             <option value="2">House</option>
                         </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="numguests">Accomodates <i class="icon-lock"></i></label>
+                        <input name="numguests" placeholder="Number of guests" rel="tooltip" id="numguests" type="number" min="0"
+                               title="Input the number of guests that can stay in your listing." required/>
                     </div>
                    
                     <div class="control-group">
@@ -37,17 +44,24 @@
                     
                     <div class="control-group">
                         <label class="control-label" for="price">Price <i class="icon-lock"></i></label>
-                        <input name="price" placeholder="Price for rental period" rel="tooltip" id="price" type="number" min="0"
-                               title="Input the rentral price for your selected time period." required/>
+                        <input name="price" placeholder="Price per room per month" rel="tooltip" id="price" type="number" min="0"
+                               title="Input the rentral price per occupant per month." required/>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="address">Address <i class="icon-lock"></i></label>
+                        <input name="address" placeholder="Listing address" rel="tooltip" id="address" type="text"
+                               title="Input the physical address of your rental." required/>
                     </div>
                     
                     <div class="control-group">
                         <label class="control-label" for="photos">Photos <i class="icon-lock"></i></label>
-                         See below
+                        <input type="filepicker" data-fp-apikey="AiELT67czTZyfgU1zLdsAz" data-fp-button-text="Upload photos" data-fp-button-class="btn btn-custom2"	data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-multiple="true" data-fp-maxsize="5000000" data-fp-services="COMPUTER" onchange="out='';for(var i=0;i<event.fpfiles.length;i++){out+=event.fpfiles[i].url;out+=' '};alert(out)">
                     </div>
-                    
+                   
                     
                 </fieldset>
+                
             </form>
             <div id="dragAndDropFiles" class="uploadArea">
             </div>           

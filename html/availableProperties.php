@@ -9,7 +9,7 @@
                (completion.task_id IS NULL OR submitted = 0) AND paid = 1 AND createdby != {$_SESSION['id']}
                AND FINISHED = 0");
                
-        $name = query("SELECT name FROM users WHERE id =?", $_SESSION["id"]);
+        $name = query("SELECT name FROM users2 WHERE id =?", $_SESSION["id"]);
     
         if($name === false)
         {

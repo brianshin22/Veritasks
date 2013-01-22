@@ -31,6 +31,8 @@
         <script src="js/scripts.js"></script>
         <script src="js/jquery.dataTables.js"></script>
         <script src="js/bootstrapDatatables.js"></script>
+        <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+        
         <?php
         if (empty($_SESSION["id"]))
         {

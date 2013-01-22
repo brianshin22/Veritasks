@@ -17,7 +17,7 @@
         }
 
         // query database for user
-        $rows = query("SELECT * FROM users WHERE email = ?", $_POST["email"]);
+        $rows = query("SELECT * FROM users2 WHERE email = ?", $_POST["email"]);
 
         // if we found user, check password
         if (count($rows) == 1)
@@ -25,8 +25,10 @@
             // first (and only) row
             $row = $rows[0];
 
-            // compare hash of user's input against hash that's in database
-            if (crypt($_POST["password"], $row["hash"]) == $row["hash"])
+        // compare hash of user's input against hash that's in database
+
+
+            if (crypt($_POST['password'], $row["password"] == $row["password"]))
             {
                 // remember that user's now logged in by storing user's ID in session
                 $_SESSION["id"] = $row["id"];

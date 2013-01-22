@@ -16,7 +16,8 @@
             apologize("Could not retrieve name");
         }
         
-        $_SESSION["name"] = $name[0]["name"];
+        $name = $name[0];
+        $_SESSION["name"] = $name["name"];
     
     
         // renders tasks

@@ -10,6 +10,6 @@
     
 
     <div class="span6">
-        <a class="btn btn-primary" href="index2.php">Find a space</a>
+        <a class="btn btn-primary" href="index.php">Find a space</a>
     </div>
 </div>

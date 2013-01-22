@@ -1,14 +1,4 @@
 <?php
-
-    /***********************************************************************
-     * config.php
-     *
-     * Computer Science 50
-     * Problem Set 7
-     *
-     * Configures pages.
-     **********************************************************************/
-
     // display errors, warnings, and notices
     ini_set("display_errors", true);
     error_reporting(E_ALL);
@@ -21,7 +11,7 @@
     session_start();
 
     // require authentication for most pages
-    if (!preg_match("{(?:login|logout|register|about|index2|verify)\.php$}", $_SERVER["PHP_SELF"]))
+    if (!preg_match("{(?:login|logout|register|about|verify)\.php$}", $_SERVER["PHP_SELF"]))
     {
         if (empty($_SESSION["id"]))
         {

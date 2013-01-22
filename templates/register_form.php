@@ -2,6 +2,7 @@
 
 <script src="js/confirmRegistration.js"></script>
 
+<div>
 <h3> Register </h3>
 <form id="register" action="register.php" method="post">
     <fieldset>
@@ -30,7 +31,5 @@
         </div>
     </fieldset>
 </form>
-
-<div>
-    <a class = "btn btn-primary" href="login.php">Log In</a> 
 </div>
+

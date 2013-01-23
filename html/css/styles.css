@@ -114,6 +114,14 @@ padding:4px;
     display:none;
 }
 
+.background
+{
+    background:url("http://www.harvard.edu/sites/default/files/visitors/11.jpg");
+    background-size: 200% 200%;
+    background-color:#cccccc;
+    height: 450px;
+}
+
 body
 {
     padding-top: 20px;

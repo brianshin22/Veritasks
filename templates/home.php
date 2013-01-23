@@ -1,8 +1,31 @@
-<script src="js/carousel.js"></script>
+<!--<script src="js/carousel.js"></script>-->
 
-<div>
-    <h2>Welcome to Harvard Sublets!</h2>
-    
+
+
+<div class="container" style="padding-bottom: 20px">
+    <div class="background">
+        <div class="span6">
+            <h2>Harvard Sublets</h2>
+            <h3>Find off campus housing within the Harvard community</h3>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="well span4 offset2">
+            <h4>Looking for temporary housing?</h4>
+            <p>Find rooms and apartments from other Harvard affiliates</p>
+        </div>
+
+        <div class="well span4">
+            <h4>Have extra room? Going somewhere?</h4>
+            <p>List your space for the Harvard community to see!</p>
+        </div>
+    </div>    
 </div>
 
 
@@ -35,7 +58,7 @@
 
 
 <div>
-    <h4>Hello</h4>
+    <h4></h4>
     <p>Find reliable and trustworthy housing from Harvard affiliates! </p>
 </div>
 

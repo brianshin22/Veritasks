@@ -2,10 +2,7 @@
 function fnFormatDetails ( oTable, nTr )
 {
     var aData = oTable.fnGetData( nTr );
-    var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
-    sOut += '<tr><td>Additional Information:</td><td>'+aData[5]+'</td></tr>';
-    sOut += '<tr><td>Number of Completions:</td><td>'+aData[6]+' out of '+ aData[7] + '</td></tr>';
-    sOut += '</table>';
+    var sOut = 'Description: ' + aData[2];
      
     return sOut;
 }
@@ -33,8 +30,8 @@ $(document).ready(function() {
     var oTable = $('#tasktable').dataTable( {
         "aoColumnDefs": [
             { "bSortable": false, "aTargets": [ 0 ] },
-            { "bSearchable": false, "aTargets": [ 5,6,7 ]},
-            { "bVisible": false, "aTargets": [ 5,6,7 ]}
+            { "bSearchable": false, "aTargets": [ 2]},
+            { "bVisible": false, "aTargets": [ 2 ]}
         ],
         "aaSorting": [[1, 'asc']],
         "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",

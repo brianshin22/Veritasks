@@ -14,6 +14,16 @@
     text-align: center;
 }
 
+.ui-autocomplete {
+    background-color: white;
+    width: 300px;
+    border: 1px solid #cfcfcf;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.ui-helper-hidden-accessible { display:none; }
+
 .btn-custom1 {
   background-color: hsl(195, 60%, 35%) !important;
   background-repeat: repeat-x;

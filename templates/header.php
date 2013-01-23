@@ -26,12 +26,16 @@
        
         ?>
         
+        
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/jquery.dataTables.js"></script>
         <script src="js/bootstrapDatatables.js"></script>
         <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+        
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
         
         <?php
         if (empty($_SESSION["id"]))

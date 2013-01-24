@@ -126,11 +126,37 @@ padding:4px;
 
 .background
 {
-    background:url("http://www.harvard.edu/sites/default/files/visitors/11.jpg");
-    background-size: 200% 200%;
+    background:url("../img/Harvardlanding2.png");
+    background-size: 100%;
     background-color:#cccccc;
     height: 450px;
 }
+
+.well2
+{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    background: rgba(205,201, 201, .4);
+
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+       -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+}
+
+.well2 blockquote *{
+
+    font: Arial,clean, sans-serif;
+    border-color: #ddd;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+
 
 body
 {

@@ -6,12 +6,28 @@
     // if form was submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        
+        $photourls = $_POST["imageurls"];
+        $urls = explode(" ", $photourls);
+        $newurls = "";
+        foreach($urls as $url)
+        {
+            $ch = curl_init($url);
+            $filename = 'uploads/' . uniqid('MyApp', true) . '.jpg';
+            $fp = fopen($filename, 'wb');
+            curl_setopt($ch, CURLOPT_FILE, $fp);
+            curl_setopt($ch, CURLOPT_HEADER, 0);
+            curl_exec($ch);
+            curl_close($ch);
+            fclose($fp);
+            $newurls = $newurls . $filename . " ";
+        } 
+        $newurls = trim($newurls);
+ 
         // try to add task
         $results = query("INSERT INTO properties (property_type, title, Description, 
-                        Address, latitude, longitude, ownerid) VALUES (?,?,?,?,?,?,?)",
+                        Address, latitude, longitude, ownerid, photourls) VALUES (?,?,?,?,?,?,?,?)",
                          $_POST["propertytype"], $_POST["title"],$_POST["property_description"], 
-                         $_POST["address"], $_POST["latitude1"], $_POST["longitude1"], $_SESSION["id"]);
+                         $_POST["address"], $_POST["latitude1"], $_POST["longitude1"], $_SESSION["id"], $newurls);
         if ($results === false)
         {
             apologize("Unable to add your property. Please try again.");

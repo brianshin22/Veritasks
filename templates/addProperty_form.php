@@ -1,6 +1,7 @@
 <!-- Form to create a listing -->
 
 <script src="js/multiupload.js"></script>
+<script src="js/upload.js"></script>
 <script src="js/displayMap.js"></script>
 <?php echo "uploads/{$_SESSION["id"]}/"?>
 <div class="row">
@@ -43,14 +44,14 @@
                     <div id="map_canvas" style="width:400px; height:200px"></div>
                     
                     <input type="hidden" name="latitude1" id="latitude1" type="text"/>
-                    <input type="hidden" name="longitude1" id="longitude1" type="text"/>
+                    <input type="hidden" name="longitude1" id="longitude1" type="text"/></br>
                            
                     <div class="control-group">
                         <label class="control-label" for="photos">Photos <i class="icon-lock"></i></label>
-                        See below
+                        <input type="filepicker" id="filepicker" data-fp-apikey="AiELT67czTZyfgU1zLdsAz" data-fp-button-text="Upload photos" data-fp-button-class="btn btn-custom2"	data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-multiple="true" data-fp-maxsize="10485760" data-fp-services="COMPUTER">
                     </div>
                    
-                    
+                    <input type="hidden" name="imageurls" id="imageurls"/>
                 </fieldset>
                 
             </form>

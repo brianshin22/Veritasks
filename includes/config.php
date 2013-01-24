@@ -15,7 +15,7 @@
     {
         if (empty($_SESSION["id"]))
         {
-            redirect("about.php");
+            redirect("index.php");
         }
     }
 

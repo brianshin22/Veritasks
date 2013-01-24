@@ -2,8 +2,14 @@
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
-$target_path = "uploads/{$_SESSION["id"]}/" . $_FILES['file']['name'];
-if(move_uploaded_file($_FILES['file']['tmp_name'], $target_path))
+
+ $info = pathinfo($_FILES['file']['name']);
+ $ext = $info['extension']; // get the extension of the file
+ $newname = "{$_SESSION["id"]}.".$ext; 
+
+ $target = 'uploads/'.$newname;
+ 
+if(move_uploaded_file($_FILES['file']['tmp_name'], $target))
 {
 echo($_POST['index']); // to validate 
 }

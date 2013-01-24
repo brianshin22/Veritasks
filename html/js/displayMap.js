@@ -6,7 +6,7 @@ var longitude;
     
 function initialize(){
 //MAP
-  var latlng = new google.maps.LatLng(41.659,-4.714);
+  var latlng = new google.maps.LatLng(42.376181,-71.115757);
   var options = {
     zoom: 16,
     center: latlng,
@@ -48,8 +48,10 @@ $(function() {
       select: function(event, ui) {
         $("#latitude").val(ui.item.latitude);
         $("#longitude").val(ui.item.longitude);
-        $("#latitude1").val(latitude);
-        $("#longitude1").val(longitude);
+        latitude = ui.item.latitude;
+        longitude= ui.item.longitude;
+        $("#latitude1").val(latitude).attr("placeholder", latitude);
+        $("#longitude1").val(longitude).attr("placeholder", longitude);
         var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
         marker.setPosition(location);
         map.setCenter(location);

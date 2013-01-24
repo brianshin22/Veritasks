@@ -31,11 +31,10 @@
         <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/scripts.js"></script>
-        <script src="js/jquery.dataTables.js"></script>
-        <script src="js/bootstrapDatatables.js"></script>
         <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
-        
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZPTmI4HVNMCeQq9DqSf0iKe59KV8Aggw&sensor=false">
+        </script>
         
         <?php
         if (empty($_SESSION["id"]))
@@ -62,7 +61,7 @@
                                   <li class="divider-vertical"></li>
                                  
                                 </ul>
-                                <a class="btn pull-right" id="addproperty" href="addProperty.php">Add a property</a>
+                                <a class="btn pull-right" id="addproperty" href="addProperty.php">Add a listing</a>
                                 <a class="btn pull-right" id="logout" style="margin-right:5px" href="logout.php">Logout</a>
                             </div>
                         </div>

@@ -53,9 +53,6 @@
                                 <a class="brand" id= "logo" href="index.php">hSub</a>
                                 <ul class="nav">
                                   <li class="divider-vertical"></li>
-                                  <li <?=echoActiveClassIfRequestMatches("about")?>>
-                                    <a href="about.php">About</a></li>
-                                  <li class="divider-vertical"></li>
                                   <li <?=echoActiveClassIfRequestMatches("properties")?>>
                                     <a href="availableProperties.php">Available Properties</a></li>
                                   <li class="divider-vertical"></li>

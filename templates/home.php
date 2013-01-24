@@ -1,12 +1,13 @@
-<!--<script src="js/carousel.js"></script>-->
 
 
 
 <div class="container" style="padding-bottom: 20px">
     <div class="background">
-        <div class="span6">
+        <div class="well2 span6">
+            <blockquote>
             <h2>Harvard Sublets</h2>
             <h3>Find off campus housing within the Harvard community</h3>
+            </blockquote>
         </div>
 
     </div>

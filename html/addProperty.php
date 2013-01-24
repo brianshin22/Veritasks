@@ -12,7 +12,7 @@
         foreach($urls as $url)
         {
             $ch = curl_init($url);
-            $filename = 'uploads/' . uniqid('MyApp', true) . '.jpg';
+            $filename = 'uploads/' . uniqid('hello', true) . '.jpg';
             $fp = fopen($filename, 'wb');
             curl_setopt($ch, CURLOPT_FILE, $fp);
             curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -20,6 +20,7 @@
             curl_close($ch);
             fclose($fp);
             $newurls = $newurls . $filename . " ";
+            chmod ($filename, 0644);
         } 
         $newurls = trim($newurls);
  

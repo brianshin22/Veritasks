@@ -11,7 +11,7 @@
                 <fieldset>
                     <div class="control-group">
                         <label class="control-label" for="property_type">Property type <i class="icon-lock"></i></label>
-                        <select id = "property_type" name = "propertytype" title="Please select the type of property">
+                        <select id = "property_type" name = "propertytype" title="Please select the type of property" required>
                             <option value="0">Select Property Type</option>
                             <option value="1">Apartment</option>
                             <option value="2">House</option>
@@ -23,7 +23,7 @@
                             Listing title<i class="icon-lock"></i></label>
                         <textarea name="title" rel="tooltip" id="title" rows="2" placeholder="Title" 
                             title="Input a short description of your property that will serve as your
-                            listing's title."></textarea>
+                            listing's title." required></textarea>
                     </div>
                     
                     <div class="control-group">
@@ -31,7 +31,7 @@
                             Longer Description<i class="icon-lock"></i></label>
                         <textarea name="property_description" rel="tooltip" id="property_description" rows="4"
                          placeholder="More specific description of your listing (rooms, price, rental dates, etc.)" 
-                            title="Input a longer description of your property."></textarea>
+                            title="Input a longer description of your property." required></textarea>
                     </div>
                     
                     <div class="control-group">
@@ -42,8 +42,8 @@
                     
                     <div id="map_canvas" style="width:400px; height:200px"></div>
                     
-                    <input name="latitude1" id="latitude1" type="text"/>
-                    <input name="longitude1" id="longitude1" type="text"/>
+                    <input type="hidden" name="latitude1" id="latitude1" type="text"/>
+                    <input type="hidden" name="longitude1" id="longitude1" type="text"/>
                            
                     <div class="control-group">
                         <label class="control-label" for="photos">Photos <i class="icon-lock"></i></label>

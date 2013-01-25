@@ -9,14 +9,6 @@
         <h3>Add a Listing</h3>
             <form class="form-horizontal" id="addListing" action="addProperty.php" method="post">
                 <fieldset>
-                    <div class="control-group">
-                        <label class="control-label" for="property_type">Property type <i class="icon-lock"></i></label>
-                        <select id = "property_type" name = "propertytype" title="Please select the type of property" required>
-                            <option value="0">Select Property Type</option>
-                            <option value="1">Apartment</option>
-                            <option value="2">House</option>
-                        </select>
-                    </div>
                     
                     <div class="control-group">
                         <label class="control-label" for="title">

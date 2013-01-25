@@ -17,10 +17,10 @@
         }
 
         // query database for user
-        $rows = query("SELECT users2.*, properties.propertyid FROM users2 LEFT JOIN  properties ON users2.id = properties.ownerid WHERE email = ?", $_POST["email"]);
+        $rows = query("SELECT users2.*, properties.propertyid FROM users2 LEFT JOIN  properties ON users2.id = properties.ownerid WHERE email =?", $_POST["email"]);
 
         // if we found user, check password
-        if (count($rows) == 1)
+        if (count($rows) >= 1)
         {
             // first (and only) row
             $row = $rows[0];
@@ -44,7 +44,7 @@
                 redirect("./index.php");
             }
 
-                    }
+        }
 
         // else apologize
         apologize("Invalid email and/or password.");

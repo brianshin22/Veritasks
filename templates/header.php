@@ -56,9 +56,25 @@
                                   <li <?=echoActiveClassIfRequestMatches("about")?>>
                                     <a href="about.php">About</a></li>
                                   <li class="divider-vertical"></li>
-                                  <li <?=echoActiveClassIfRequestMatches("properties")?>>
+                                  <li <?=echoActiveClassIfRequestMatches("availableProperties")?>>
                                     <a href="availableProperties.php">Available Properties</a></li>
                                   <li class="divider-vertical"></li>
+                                  
+                                  <?php
+                                    
+                                    if(isset($_SESSION["propertyid"])) 
+                                    {
+                                        
+                                            echo '<li '; 
+                                            echoActiveClassIfRequestMatches("updateListing");
+                                            echo '>';
+                                            echo '<a href="updateListing.php">Edit Your Listing</a></li>';
+                                            echo '<li class="divider-vertical"></li>';
+
+                                    }                                                                               
+                                  ?>
+
+
                                  
                                 </ul>
                                 <a class="btn pull-right" id="addproperty" href="addProperty.php">Add a listing</a>

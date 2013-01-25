@@ -135,7 +135,11 @@ padding:4px;
 .well2
 {
     min-height: 20px;
-    padding: 19px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 1px;
+    padding-left: 1px;
+    margin-top: 20px;
     margin-bottom: 20px;
     border: 1px solid #e3e3e3;
     background: rgba(205,201, 201, .4);
@@ -149,13 +153,34 @@ padding:4px;
 
 }
 
-.well2 blockquote *{
-
-    font: Arial,clean, sans-serif;
-    border-color: #ddd;
-    border-color: rgba(0, 0, 0, 0.15);
+.big
+{
+    font-family: "Lucida console";
+    color: black;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+ 
 }
 
+.small
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "Helvetica";
+    font-size: 20px:
+}
+
+*.unselect
+{
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    cursor: hand;
+    cursor: pointer;
+}
 
 
 body

@@ -33,15 +33,17 @@
             apologize("Unable to add your property. Please try again.");
         }
         
-        $results = query("SELECT LAST_INSERT_ID() AS id");
-        $property = $results[0]["id"];
+        $results = query("SELECT LAST_INSERT_ID() AS propertyid");
+
+
+        $property = $results[0]["propertyid"];
         
         if ($property === false)
         {
             apologize("Error updating property.");
         }
         
-        $_SESSION['property'] = $property;
+        $_SESSION['propertyid'] = $property;
         
 #        $results2 = query("INSERT INTO listings (begindate, enddate, price, 
 #                        p_id) VALUES (?,?,?,?)",
@@ -51,7 +53,7 @@
 #            apologize("Unable to add your property. Please try again.");
 #        }
         
-        redirect("about.php");
+        redirect("index.php");
     }
     else
     {

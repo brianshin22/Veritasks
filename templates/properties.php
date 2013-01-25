@@ -65,7 +65,7 @@ initialize();
                 <div id="map_canvas" style="width:500px; height:500px"></div>
             </div>
             <div class="span5 offset1">
-                <table id="tasktable" class="table table-hover ">
+                <table id="tasktable" class="table table-hover unselect">
                     <thead>
                     </thead>
                     <tbody>
@@ -79,9 +79,9 @@ initialize();
                                 </a>
                             </td>
                             
-                            
                         </tr>
                     <? endforeach ?> 
+
                     </tbody>
                 </table>
             </div>

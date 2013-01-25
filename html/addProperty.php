@@ -36,7 +36,7 @@
      
             // try to add task
             $results = query("INSERT INTO properties (property_type, title, Description, 
-                            Address, latitude, longitude, ownerid, photourls) VALUES (?,?,?,?,?,?,?,?)",
+                            Address, latitude, longitude, ownerid, photourls, active) VALUES (?,?,?,?,?,?,?,?, 1)",
                              $_POST["propertytype"], $_POST["title"],$_POST["property_description"], 
                              $_POST["address"], $_POST["latitude1"], $_POST["longitude1"], $_SESSION["id"], $newurls);
             if ($results === false)

@@ -68,12 +68,11 @@ initialize();
                     </thead>
                     <tbody>
 
-                    
                     <?php foreach ($rows as $row): ?>
                         <tr>  
                             <td>
                                 <p><?=$row["title"]?></p>
-                                <a href="/page.php?id=<?=$row['propertyid']?>" >
+                                <a href="page.php?id=<?=$row['propertyid']?>" >
                                 </a>
                             </td>
                             

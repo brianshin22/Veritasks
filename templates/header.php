@@ -58,8 +58,8 @@
                                   <li class="divider-vertical"></li>
                                  
                                 </ul>
-                                <a class="btn pull-right" id="addproperty" href="addProperty.php">Add a listing</a>
-                                <a class="btn pull-right" id="logout" style="margin-right:5px" href="logout.php">Logout</a>
+                                <a class="btn pull-right" id="logout2"  href="logout.php">Logout</a>
+                                <a class="btn pull-right" id="addproperty2" style="margin-right:5px" href="addProperty.php">Add a listing</a>
                             </div>
                         </div>
                     </div>

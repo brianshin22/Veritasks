@@ -17,7 +17,7 @@
         }
 
         // query database for user
-        $rows = query("SELECT * FROM users2 WHERE email = ?", $_POST["email"]);
+        $rows = query("SELECT users2.*, properties.propertyid FROM users2 LEFT JOIN  properties ON users2.id = properties.ownerid WHERE email = ?", $_POST["email"]);
 
         // if we found user, check password
         if (count($rows) == 1)
@@ -32,11 +32,19 @@
             {
                 // remember that user's now logged in by storing user's ID in session
                 $_SESSION["id"] = $row["id"];
+                
+                
+                if($row["propertyid"] != NULL)
+                {
+                    $_SESSION["propertyid"] = 1;
+                }
+
 
                 // redirect to portfolio
                 redirect("./index.php");
             }
-        }
+
+                    }
 
         // else apologize
         apologize("Invalid email and/or password.");

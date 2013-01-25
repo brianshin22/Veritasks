@@ -53,9 +53,29 @@
                                 <a class="brand" id= "logo" href="index.php">hSub</a>
                                 <ul class="nav">
                                   <li class="divider-vertical"></li>
-                                  <li <?=echoActiveClassIfRequestMatches("properties")?>>
+
+                                  <li <?=echoActiveClassIfRequestMatches("about")?>>
+                                    <a href="about.php">About</a></li>
+                                  <li class="divider-vertical"></li>
+                                  <li <?=echoActiveClassIfRequestMatches("availableProperties")?>>
                                     <a href="availableProperties.php">Available Properties</a></li>
                                   <li class="divider-vertical"></li>
+                                  
+                                  <?php
+                                    
+                                    if(isset($_SESSION["propertyid"])) 
+                                    {
+                                        
+                                            echo '<li '; 
+                                            echoActiveClassIfRequestMatches("updateListing");
+                                            echo '>';
+                                            echo '<a href="updateListing.php">Edit Your Listing</a></li>';
+                                            echo '<li class="divider-vertical"></li>';
+
+                                    }                                                                               
+                                  ?>
+
+
                                  
                                 </ul>
                                 <a class="btn pull-right" id="logout2"  href="logout.php">Logout</a>

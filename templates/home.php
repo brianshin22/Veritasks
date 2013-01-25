@@ -1,13 +1,14 @@
 
 
-
 <div class="container" style="padding-bottom: 20px">
     <div class="background">
-        <div class="well2 span6">
-            <blockquote>
-            <h2>Harvard Sublets</h2>
-            <h3>Find off campus housing within the Harvard community</h3>
-            </blockquote>
+        <div class="well2 span4">
+            <div class="big">
+                <span> Harvard Sublets</span>
+            </div>
+            <div class="small">
+                <span> Find off campus housing within the Harvard community </span>
+            </div>
         </div>
 
     </div>
@@ -62,5 +63,4 @@
     <h4></h4>
     <p>Find reliable and trustworthy housing from Harvard affiliates! </p>
 </div>
-
 

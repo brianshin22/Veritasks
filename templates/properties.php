@@ -63,7 +63,14 @@ initialize();
         <div class="row">
             
             <div class="span5">
+<<<<<<< HEAD
+                <div id="map_canvas" style="width:500px; height:500px"></div>
+            </div>
+            <div class="span5 offset1">
+                <table id="tasktable" class="table table-hover unselect">
+=======
                 <table id="tasktable" class="table table-hover ">
+>>>>>>> 5148a32206055ed7acf7705903fe5cca45e89baa
                     <thead>
                     </thead>
                     <tbody>
@@ -76,9 +83,9 @@ initialize();
                                 </a>
                             </td>
                             
-                            
                         </tr>
                     <? endforeach ?> 
+
                     </tbody>
                 </table>
             </div>

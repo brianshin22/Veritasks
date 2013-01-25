@@ -1,9 +1,8 @@
 <!-- Form to create a listing -->
 
-<script src="js/multiupload.js"></script>
 <script src="js/upload.js"></script>
 <script src="js/displayMap.js"></script>
-<?php echo "uploads/{$_SESSION["id"]}/"?>
+
 <div class="row">
     <div class="span5 offset4">
         <div class="well">
@@ -48,22 +47,12 @@
                            
                     <div class="control-group">
                         <label class="control-label" for="photos">Photos <i class="icon-lock"></i></label>
-                        <input type="filepicker" id="filepicker" data-fp-apikey="AiELT67czTZyfgU1zLdsAz" data-fp-button-text="Upload photos" data-fp-button-class="btn btn-custom2"	data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-multiple="true" data-fp-maxsize="10485760" data-fp-services="COMPUTER">
+                        <input type="filepicker" id="filepicker" data-fp-apikey="AiELT67czTZyfgU1zLdsAz" data-fp-button-text="Upload photos" data-fp-button-class="btn"	data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-multiple="true" data-fp-maxsize="10485760" data-fp-services="COMPUTER">
                     </div>
                    
                     <input type="hidden" name="imageurls" id="imageurls"/>
                 </fieldset>
-                
-            </form>
-            <div id="dragAndDropFiles" class="uploadArea">
-            </div>           
-            <form name="demoFiler" id="demoFiler" enctype="multipart/form-data">
-                <input type="file" name="multiUpload" id="multiUpload" multiple />
-                <input type="submit" name="submitHandler" id="submitHandler" value="Upload photos" />
-            </form>
-            <div class="progressBar">
-                <div class="status"></div>
-            </div>
+              
             <button type="submit" class="btn" form="addListing">Submit</button>
         </div>
     </div>

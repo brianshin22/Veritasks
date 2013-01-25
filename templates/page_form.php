@@ -52,42 +52,36 @@ initialize();
     <p><?= $prop["Address"]?></p>
 
 </div>
-
-<div>
-    <div id="map_canvas" style="width:500px; height:500px">
+<div class="row">
+    <div class="span5 offset2">
+        <div id="map_canvas" style="width:500px; height:500px"></div>
     </div>
 
-</div>
+    <div class="span5 offset1">
+        <div id="galleria">
+            <?php 
+            $urls = explode(" ", $prop["photourls"]);
+            
+            foreach($urls as $url){
+                echo "<img src='$url' />\n";
+            }  
+                 
+            ?>
 
 
-    <div id="galleria">
-<?php 
-
-    $dirname = "uploads/"; 
-    $images = scandir($dirname); 
-    $ignore = Array(".", "..", "otherfiletoignore");
-    foreach($images as $curimg){
-    if(!in_array($curimg, $ignore)) {
-    echo "<img src='uploads/$curimg' />\n";
-    }; 
-    }  
-         
-    ?>
-
-    <script>
-        Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-        Galleria.run('#galleria');
-    </script>
-
+        </div>
     </div>
-
-
+    
 </div>
 
 
 
 
 <script src="galleria/galleria-1.2.9.min.js"></script>
+<script>
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('#galleria');
+</script>
 <style>
-    #galleria{ width: 800; height: 400px; background: #000 }
+    #galleria{ width: 500; height: 400px; background: #000 }
 </style>

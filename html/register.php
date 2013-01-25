@@ -3,14 +3,14 @@
     // configuration
     require("../includes/config.php"); 
     require_once("lib/MailClass.inc");
-
+    $regex = "/^\w+@(?=\w*\.)?harvard.edu$/";
     // if form was submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // validate inputs
-        if (empty($_POST["email"]))
+        if (empty($_POST["email"]) || !preg_match($regex, $_POST["email"]))
         {
-            apologize("You must enter an email.");
+            apologize("You must enter a valid Harvard email address.");
         }
         else if (empty($_POST["password"]))
         {

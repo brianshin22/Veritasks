@@ -10,9 +10,7 @@
                  Find off campus housing within the Harvard community
             </div>
         </div>
-
     </div>
-
 </div>
 
 

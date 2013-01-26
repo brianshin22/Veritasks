@@ -14,7 +14,7 @@
                     
                     <div class="control-group">
                         
-                        <input autofocus name="username" placeholder="Full Name" id="username" 
+                        <input name="username" placeholder="Full Name" id="username" 
                                type="text" title="Enter your full name." required/>
                     </div>
                     

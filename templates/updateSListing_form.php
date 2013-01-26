@@ -4,15 +4,15 @@ $(document).ready(function(){
 
 var oval = <?PHP print $row['active']; ?>;
 var propertyid = <?= $row['propertyid'] ?>;
-$("hidden6").val(propertyid);
+$("#hidden6").val(propertyid);
 if(oval == 1)
 {
-    $("#closeListing").html('Close listing');
+    $("#availability").html('Close listing');
     $("#hidden5").val(0);
 }
 else
 {
-    $("#closeListing").html('Open listing');
+    $("#availability").html('Open listing');
     $("#hidden5").val(1);
 }
 });
@@ -58,12 +58,13 @@ else
                 </fieldset>
             </form>  
             <button type="submit" class="btn" form="finishUpdate">Update</button>
-            
-        <form id = "closeListing" action="closeListing.php" method="post">
-            <input type="hidden" id="hidden5" name="hidden5">
-            <input type="hidden" id="hidden6" name="hidden6">
-            <button class="btn" type="submit" value="Close Task">Close Task</button>
-        </form>
+        <p>    
+            <form id = "closeListing" action="closeListing.php" method="post">
+                <input type="hidden" id="hidden5" name="hidden5"/>
+                <input type="hidden" id="hidden6" name="hidden6"/>
+                <button class="btn" type="submit" id = "availability" value="Close Task">Close Listing</button>
+            </form>
+        </p>
         </div>
     </div>
 </div>

@@ -50,7 +50,7 @@
                     <div class="navbar-outer">
                         <div class="navbar">
                             <div class="navbar-inner">
-                                <a class="brand" id= "logo" href="index.php">hSub</a>
+                                <a class="brand" id= "logo" href="index.php">Harvard Sublets</a>
                                 <ul class="nav">
                                   <li class="divider-vertical"></li>
                                   <li <?=echoActiveClassIfRequestMatches("availableProperties")?>>
@@ -65,7 +65,7 @@
                                             echo '<li '; 
                                             echoActiveClassIfRequestMatches("updateListing");
                                             echo '>';
-                                            echo '<a href="updateListing.php">Edit Your Listing</a></li>';
+                                            echo '<a href="updateListing.php">Edit Your Listings</a></li>';
                                             echo '<li class="divider-vertical"></li>';
 
                                     }                                                                               

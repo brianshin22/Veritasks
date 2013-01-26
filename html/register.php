@@ -3,7 +3,7 @@
     // configuration
     require("../includes/config.php"); 
     require_once("lib/MailClass.inc");
-    $regex = "/^\w+@(?=\w*\.)?harvard.edu$/";
+    $regex = "/^\w+@(\w*\.)?harvard.edu$/";
     // if form was submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
@@ -40,7 +40,7 @@
 
  
         $msg = 'Your account has been created! Please click the link to confirm your registration. You can enter your login information and the verification code given below.' .PHP_EOL;
-        $msg.= "http://" . $_SERVER["SERVER_NAME"]."/verify.php?email="  .$email ."&hash=".$hash .PHP_EOL . "Verification code: " .$hash .PHP_EOL."Sincerely," .PHP_EOL . "hSub";
+        $msg.= "http://" . $_SERVER["SERVER_NAME"]."/verify.php?hash=".$hash .PHP_EOL . "Sincerely," .PHP_EOL . "hSub";
         $msg.= "";
         
         $mailer = new PHPMailer();

@@ -1,15 +1,16 @@
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            window.location.href="/#";
+        }, 5000);    
+    }); 
+</script>
+
+
+
 <div>
     <h3>Congratulations and welcome to hSubs!</h3>
+    <p>You will now be redirected back to the home page.</p>
 </div>
 
-<div>
-    <div class="span6">
-        <a class="btn btn-primary" href="addProperty.php">List your space</a>
-        
-    </div>
-    
 
-    <div class="span6">
-        <a class="btn btn-primary" href="index.php">Find a space</a>
-    </div>
-</div>

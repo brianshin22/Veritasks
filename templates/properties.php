@@ -87,9 +87,6 @@ initialize();
                     </tbody>
                 </table>
             </div>
-            <div class="span5 offset1">
-                <div id="map_canvas" style="width:100%; height:500px"></div>
-            </div>
         </div>
     </div>
 </div>

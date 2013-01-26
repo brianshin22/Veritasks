@@ -187,6 +187,8 @@ padding:4px;
 body
 {
     padding-top: 20px;
+    background-image: url('../img/satinweave.png');
+    word-wrap: break-word;
 }
     
 @media (max-width: 1200px) {

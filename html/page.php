@@ -21,9 +21,19 @@
         $query = $query[0];
     }
 
+    $nameSearch = query("SELECT email FROM users2 LEFT JOIN properties ON id = properties.ownerid WHERE properties.propertyid = ?", $propertyid);
 
+    if($nameSearch === false)
+    {
+        apologize("Could not retrieve property owner contact information");
+    }
+    
+    $nameSearch = $nameSearch[0];
 
-    render("page_form.php", array("title" => "Property listing", "prop" => $query));
+    $ownerEmail = $nameSearch["email"];
+    
+
+    render("page_form.php", array("title" => "Property listing", "prop" => $query, "contact" => $ownerEmail));
 
 
 ?>

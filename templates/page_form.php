@@ -1,38 +1,42 @@
 <div class="container">
-<div class="well2">
+    <div class="well2">
 
-<h3><?= $prop["title"] ?></h3>
+        <h3><?= $prop["title"] ?></h3>
 
-<div>
+        <div>
 
-    <p> <?= $prop["Description"]?></p>
+            <p> <?= $prop["Description"]?></p>
 
-    <p><?= $prop["Address"]?></p>
-
-</div>
-<div class="row">
-    <div class="span5 offset1">
-        <div id="map_canvas" style="width:400px; height:400px"></div>
-    </div>
-
-    <div class="span5 ">
-        <div id="galleria">
-            <?php 
-            $urls = explode(" ", $prop["photourls"]);
+            <p><?= $prop["Address"]?></p>
             
-            foreach($urls as $url){
-                echo "<img src='$url' />\n";
-            }  
-                 
-            ?>
-
+            <br>
+            <p>Contact information: <?= $contact?></p>
 
         </div>
-    </div>
-    
-</div>
+        <div class="row" style="padding-top: 10px;">
+            <div class="span5 offset1">
+                <div id="map_canvas" style="width:400px; height:400px"></div>
+            </div>
 
-</div>
+            <div class="span5 ">
+                <div id="galleria">
+                    <?php 
+                    $urls = explode(" ", $prop["photourls"]);
+                    
+                    foreach($urls as $url){
+                        echo "<img src='$url' />\n";
+                    }  
+                         
+                    ?>
+
+
+                </div>
+            </div>
+            
+        </div>
+
+
+    </div>
 
 </div>
 

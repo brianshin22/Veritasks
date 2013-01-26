@@ -6,11 +6,12 @@
     // if form was submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        if ($_POST["propertytype"] == 0)
+        $title = $_POST["title"];
+        if ( strlen($title) > 70)
         {
-            apologize("You must enter a type for the listing.");
+            apologize("The title of your listing must be 70 characters or less.");
         }
-        elseif (empty($_POST["imageurls"]))
+        if (empty($_POST["imageurls"]))
         {
             apologize("You must upload at least one photo!");
         }

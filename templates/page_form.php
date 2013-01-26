@@ -42,16 +42,19 @@ initialize();
 });
 
 </script>
-
+<div class="row">
+    <div class="span10 offset2">
 <h3><?= $prop["title"] ?></h3>
 
-<div>
-
-    <p> <?= $prop["Description"]?></p>
+    <p> 
+        <?= $prop["Description"]?>
+    </p>
 
     <p><?= $prop["Address"]?></p>
-
+    </div>
 </div>
+
+
 <div class="row">
     <div class="span5 offset2">
         <div id="map_canvas" style="width:500px; height:500px"></div>
@@ -73,8 +76,6 @@ initialize();
     </div>
     
 </div>
-
-
 
 
 <script src="galleria/galleria-1.2.9.min.js"></script>

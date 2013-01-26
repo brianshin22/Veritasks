@@ -3,7 +3,7 @@
     // configuration
     require("../includes/config.php"); 
     require_once("lib/MailClass.inc");
-    $regex = "/^\w+@(?=\w*\.)?harvard.edu$/";
+    $regex = "/^\w+@(\w*\.)?harvard.edu$/";
     // if form was submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {

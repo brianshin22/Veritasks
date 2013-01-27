@@ -5,7 +5,7 @@
 
         <div>
 
-            <p> <?= $prop["Description"]?></p>
+            <p style="text-align:left; margin-left: 40px"> <?= $prop["Description"]?></p></br>
 
             <p><?= $prop["Address"]?></p>
             

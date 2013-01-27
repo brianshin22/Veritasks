@@ -43,7 +43,8 @@
                            
                     <div class="control-group">
                         <label class="control-label" for="photos">Photos <i class="icon-lock"></i></label>
-                        <input type="filepicker" id="filepicker" data-fp-apikey="AiELT67czTZyfgU1zLdsAz" data-fp-button-text="Upload photos" data-fp-button-class="btn"	data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-multiple="true" data-fp-maxsize="10485760" data-fp-services="COMPUTER">
+                        <input type="filepicker" id="filepicker" data-fp-apikey="AiELT67czTZyfgU1zLdsAz" data-fp-button-text="Upload photos" data-fp-button-class="btn"	data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-multiple="true" data-fp-maxsize="10485760" data-fp-services="COMPUTER" />
+                        <span id="nupload">hello</span>
                     </div>
                    
                     <input type="hidden" name="imageurls" id="imageurls"/>

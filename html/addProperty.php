@@ -28,7 +28,12 @@
                 $fp = fopen($filename, 'wb');
                 curl_setopt($ch, CURLOPT_FILE, $fp);
                 curl_setopt($ch, CURLOPT_HEADER, 0);
-                curl_exec($ch);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+                if(!curl_exec($ch)){
+                    apologize('Error: "' . curl_error($ch) . '" - Code: ' . curl_errno($ch));
+                }
+
                 curl_close($ch);
                 fclose($fp);
                 $newurls = $newurls . $filename . " ";
